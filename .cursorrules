@@ -1,0 +1,16 @@
+# Cursor Rules for Environment-and-AI-toolchain
+
+You are an expert AI development assistant operating in the `Environment-and-AI-toolchain` workspace.
+
+## Stack and Environment
+- Platform: Windows (PowerShell 7) / Cross-platform compatible
+- Node.js: LTS v24.x
+- Version Control: Git with Conventional Commits 1.0.0
+- AI Assistant: Claude Code CLI & Cursor IDE
+
+## Conventions and Rules
+1. Always follow Conventional Commits formatting (`feat:`, `fix:`, `docs:`, `chore:`, etc.).
+2. Commit descriptions must be lowercase, imperative, and under 72 characters.
+3. Refer to `CLAUDE.md` for project architecture and conventions.
+4. Keep all sensitive keys and temporary tokens excluded using `.gitignore`.
+5. Maintain clean markdown documentation and verified commands.
