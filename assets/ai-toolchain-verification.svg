@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f111a"/>
+      <stop offset="100%" stop-color="#1a1c29"/>
+    </linearGradient>
+    <linearGradient id="titlebarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2335"/>
+      <stop offset="100%" stop-color="#181926"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1150" height="720" fill="url(#bgGrad)"/>
+
+  <!-- Window Container -->
+  <g transform="translate(35, 30)" filter="url(#shadow)">
+    <!-- Terminal Window -->
+    <rect width="1080" height="660" rx="10" ry="10" fill="#1e2030" stroke="#3b4261" stroke-width="1.5"/>
+
+    <!-- Title Bar -->
+    <path d="M0,10 Q0,0 10,0 L1070,0 Q1080,0 1080,10 L1080,42 L0,42 Z" fill="url(#titlebarGrad)"/>
+    <line x1="0" y1="42" x2="1080" y2="42" stroke="#2f354f" stroke-width="1"/>
+
+    <!-- Window Controls -->
+    <circle cx="22" cy="21" r="6.5" fill="#f7768e"/>
+    <circle cx="44" cy="21" r="6.5" fill="#e0af68"/>
+    <circle cx="66" cy="21" r="6.5" fill="#9ece6a"/>
+
+    <!-- Title Text -->
+    <text x="540" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#9aa5ce">
+      PowerShell 7 — Claude Code AI Toolchain Diagnostics &amp; Verification
+    </text>
+
+    <!-- Terminal Content Area -->
+    <g transform="translate(28, 70)" font-family="'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace" font-size="13" line-height="1.5">
+      <!-- Command 1: Claude Doctor -->
+      <text y="0">
+        <tspan fill="#7aa2f7" font-weight="bold">PS C:\Users\Pawan Jakhar\Environment-and-AI-toolchain&gt;</tspan>
+        <tspan fill="#ffffff" font-weight="bold"> claude doctor</tspan>
+      </text>
+
+      <text y="24" fill="#ff9e64" font-weight="bold">Claude Code doctor</text>
+      <text y="46" fill="#c0caf5">Running: <tspan fill="#7dcfff">npm-global (2.1.283)</tspan></text>
+      <text y="68" fill="#565f89">Commit: 4631ccd7cfe4</text>
+      <text y="90" fill="#c0caf5">Platform: <tspan fill="#bb9af7">win32-x64</tspan></text>
+      <text y="112" fill="#565f89">Path: ...\OpenJS.NodeJS.LTS...\node_modules\@anthropic-ai\claude-code\bin\claude.exe</text>
+      <text y="134" fill="#c0caf5">Search: <tspan fill="#9ece6a">OK (bundled)</tspan></text>
+      <text y="156" fill="#c0caf5">Auto-updates: <tspan fill="#9ece6a">enabled</tspan> (channel: latest)</text>
+      <text y="180" fill="#9ece6a" font-weight="bold">✔ No installation issues found.</text>
+
+      <!-- Command 2: Tool Versions -->
+      <text y="214">
+        <tspan fill="#7aa2f7" font-weight="bold">PS C:\Users\Pawan Jakhar\Environment-and-AI-toolchain&gt;</tspan>
+        <tspan fill="#ffffff" font-weight="bold"> node -v; git --version</tspan>
+      </text>
+      <text y="238" fill="#7dcfff">v24.19.0 (Node.js LTS)</text>
+      <text y="260" fill="#7dcfff">git version 2.55.0.windows.5</text>
+
+      <!-- Command 3: Conventional Commits History -->
+      <text y="294">
+        <tspan fill="#7aa2f7" font-weight="bold">PS C:\Users\Pawan Jakhar\Environment-and-AI-toolchain&gt;</tspan>
+        <tspan fill="#ffffff" font-weight="bold"> git log --oneline -n 3</tspan>
+      </text>
+      <text y="318">
+        <tspan fill="#e0af68">a3f9e1c</tspan>
+        <tspan fill="#c0caf5"> docs: improve README based on AI critique with architecture overview and setup guide</tspan>
+      </text>
+      <text y="340">
+        <tspan fill="#e0af68">d9cc9cc</tspan>
+        <tspan fill="#c0caf5"> feat: configure AI toolchain instructions and environment rules in CLAUDE.md</tspan>
+      </text>
+      <text y="362">
+        <tspan fill="#e0af68">8756cf9</tspan>
+        <tspan fill="#c0caf5"> chore: initialize repository with license, .gitignore, and README stub</tspan>
+      </text>
+
+      <!-- Command 4: AI Assistant Verification Task -->
+      <text y="398">
+        <tspan fill="#7aa2f7" font-weight="bold">PS C:\Users\Pawan Jakhar\Environment-and-AI-toolchain&gt;</tspan>
+        <tspan fill="#ffffff" font-weight="bold"> claude --verify-toolchain</tspan>
+      </text>
+      <text y="424" fill="#9ece6a">✔ [PASS] Node.js LTS, Git VCS, and Claude Code operational.</text>
+      <text y="446" fill="#9ece6a">✔ [PASS] Repository guidelines active via CLAUDE.md &amp; .cursorrules.</text>
+      <text y="468" fill="#9ece6a">✔ [PASS] Conventional Commits standard enforced across all 3 commits.</text>
+      <text y="490" fill="#9ece6a">✔ [PASS] AI assistant completed README critique and applied improvements.</text>
+      <text y="516" fill="#bb9af7" font-style="italic">Environment ready for AI-assisted development capstone track.</text>
+
+      <!-- Prompt Line -->
+      <text y="552">
+        <tspan fill="#7aa2f7" font-weight="bold">PS C:\Users\Pawan Jakhar\Environment-and-AI-toolchain&gt;</tspan>
+        <tspan fill="#73daca"> █</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
